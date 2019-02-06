@@ -14,7 +14,7 @@ foreach ( $post_data as $key => $value) {
 $post_string = implode ('&', $post_items);
 
 $url =  $this->data['urlpattern'].'?'.$post_string;
-echo $url;
+echo $url."<br>";
 
 if (!array_key_exists('header', $this->data)) {
     $this->data['header'] = 'selectidp';
