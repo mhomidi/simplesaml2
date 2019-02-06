@@ -77,8 +77,7 @@ foreach ($this->data['idplist'] as $idpentry) {
     $url =  $this->data['urlpattern'].'?'.$post_string;
     //    echo $url;
     try {
-        header("Location: " . $url, true);
-        header("Location: https://www.google.com/", true);
+        header("Location: ".$url, true);
     }
     catch (Exception $e) {
         echo "salam";
