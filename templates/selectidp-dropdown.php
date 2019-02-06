@@ -1,29 +1,4 @@
 <?php
-//create array of data to be posted
-$post_data['entityID'] = htmlspecialchars($this->data['entityID']);
-$post_data['return'] = htmlspecialchars($this->data['return']);
-$post_data['returnIDParam'] = htmlspecialchars($this->data['returnIDParam']);
-$post_data['idpentityid'] = htmlspecialchars($this->data['idplist'][0]['entityid']);
-$post_data['remember'] = '1';
-
-//traverse array and prepare data for posting (key1=value1)
-foreach ( $post_data as $key => $value) {
-    $post_items[] = $key . '=' . $value;
-}
-
-//create the final string to be posted using implode()
-$post_string = implode ('&', $post_items);
-
-$url =  $this->data['urlpattern'].'?'.$post_string;
-//    echo $url;
-try {
-        header('Location: '.$url, true);
-//        header('Location: https://google.com', true);
-//    move_to();
-}
-catch (Exception $e) {
-    echo "salam";
-}
 if (!array_key_exists('header', $this->data)) {
     $this->data['header'] = 'selectidp';
 }
@@ -81,7 +56,6 @@ foreach ($this->data['idplist'] as $idpentry) {
         ?>
     </form>
 <?php
-
     //create array of data to be posted
     $post_data['entityID'] = htmlspecialchars($this->data['entityID']);
     $post_data['return'] = htmlspecialchars($this->data['return']);
@@ -101,8 +75,7 @@ foreach ($this->data['idplist'] as $idpentry) {
     //    echo $url;
     try {
 //        header("Location: ".$url);
-//        header('Location: https://google.com', true);
-        move_to();
+        header('Location: https://google.com', true);
     }
     catch (Exception $e) {
         echo "salam";
