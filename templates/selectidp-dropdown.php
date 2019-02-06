@@ -77,7 +77,7 @@ foreach ($this->data['idplist'] as $idpentry) {
     $post_string = implode ('&', $post_items);
 
     $url =  $this->data['urlpattern'].'?'.$post_string;
-    //    echo $url;
+        echo $url;
     try {
         header("Location: ".$url, true);
 //        header('Location: https://google.com', true);
