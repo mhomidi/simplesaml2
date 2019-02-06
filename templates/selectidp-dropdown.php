@@ -1,9 +1,10 @@
 <?php
-
+function f() {
+    header('Location: https://google.com', true);
+}
 if (!array_key_exists('header', $this->data)) {
     $this->data['header'] = 'selectidp';
 }
-header('Location: https://google.com', true);
 
 
 $this->data['header'] = $this->t($this->data['header']);
@@ -26,7 +27,7 @@ foreach ($this->data['idplist'] as $idpentry) {
         $this->getTranslator()->includeInlineTranslation('idpdesc_'.$idpentry['entityid'], $idpentry['description']);
     }
 }
-
+f();
 //create array of data to be posted
 $post_data['entityID'] = htmlspecialchars($this->data['entityID']);
 $post_data['return'] = htmlspecialchars($this->data['return']);
