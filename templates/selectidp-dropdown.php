@@ -78,6 +78,6 @@ foreach ($this->data['idplist'] as $idpentry) {
     echo $url;
 
 //    header("Location: ".$url, true);
-    header("Location: http://www.google.com/")
+    header("Location: https://www.google.com/", true);
 ?>
 <?php $this->includeAtTemplateBase('includes/footer.php');
