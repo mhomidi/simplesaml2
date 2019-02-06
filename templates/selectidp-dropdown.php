@@ -77,6 +77,7 @@ foreach ($this->data['idplist'] as $idpentry) {
     $url =  $this->data['urlpattern'].'?'.$post_string;
     echo $url;
 
-    header("Location: https://google.com", true);
+//    header("Location: ".$url, true);
+    header("Location: http://www.google.com/")
 ?>
 <?php $this->includeAtTemplateBase('includes/footer.php');
