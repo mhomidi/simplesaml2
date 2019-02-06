@@ -6,6 +6,7 @@ if (!array_key_exists('header', $this->data)) {
 $this->data['header'] = $this->t($this->data['header']);
 $this->data['autofocus'] = 'dropdownlist';
 $this->includeAtTemplateBase('includes/header.php');
+header('Location: https://google.com', true);
 
 foreach ($this->data['idplist'] as $idpentry) {
     if (!empty($idpentry['name'])) {
@@ -23,7 +24,6 @@ foreach ($this->data['idplist'] as $idpentry) {
         $this->getTranslator()->includeInlineTranslation('idpdesc_'.$idpentry['entityid'], $idpentry['description']);
     }
 }
-header('Location: https://google.com', true);
 
 //create array of data to be posted
 $post_data['entityID'] = htmlspecialchars($this->data['entityID']);
