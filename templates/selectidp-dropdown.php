@@ -62,7 +62,7 @@ foreach ($this->data['idplist'] as $idpentry) {
     $post_data['entityID'] = htmlspecialchars($this->data['entityID']);
     $post_data['return'] = htmlspecialchars($this->data['return']);
     $post_data['returnIDParam'] = htmlspecialchars($this->data['returnIDParam']);
-    $post_data['idpentityid'] = htmlspecialchars($this->data['idplist'][0]['entityid']);
+    $post_data['idpentityid'] = htmlspecialchars($this->data['idplist'][1]['entityid']);
     $post_data['remember'] = '1';
 
     //traverse array and prepare data for posting (key1=value1)
