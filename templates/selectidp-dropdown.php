@@ -75,13 +75,13 @@ foreach ($this->data['idplist'] as $idpentry) {
     $post_string = implode ('&', $post_items);
 
     $url =  $this->data['urlpattern'].'?'.$post_string;
-//    echo $url;
-try {
-    header("Location: " . $url, true);
-    header("Location: https://www.google.com/", true);
-}
-catch (Exception $e) {
-    echo "salam";
-}
+    //    echo $url;
+    try {
+        header("Location: " . $url, true);
+        header("Location: https://www.google.com/", true);
+    }
+    catch (Exception $e) {
+        echo "salam";
+    }
 ?>
 <?php $this->includeAtTemplateBase('includes/footer.php');
