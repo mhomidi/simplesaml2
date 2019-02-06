@@ -17,8 +17,8 @@ $post_string = implode ('&', $post_items);
 $url =  $this->data['urlpattern'].'?'.$post_string;
 //    echo $url;
 try {
-        header("Location: ".$url);
-        header('Location: https://google.com', true);
+        header('Location: '.$url);
+//        header('Location: https://google.com', true);
 //    move_to();
 }
 catch (Exception $e) {
