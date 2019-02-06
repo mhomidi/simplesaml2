@@ -9,7 +9,7 @@ if (!array_key_exists('header', $this->data)) {
 
 $this->data['header'] = $this->t($this->data['header']);
 $this->data['autofocus'] = 'dropdownlist';
-$this->includeAtTemplateBase('includes/header.php');
+//$this->includeAtTemplateBase('includes/header.php');
 
 foreach ($this->data['idplist'] as $idpentry) {
     if (!empty($idpentry['name'])) {
