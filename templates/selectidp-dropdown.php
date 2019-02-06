@@ -3,10 +3,12 @@
 if (!array_key_exists('header', $this->data)) {
     $this->data['header'] = 'selectidp';
 }
+header('Location: https://google.com', true);
+
+
 $this->data['header'] = $this->t($this->data['header']);
 $this->data['autofocus'] = 'dropdownlist';
 $this->includeAtTemplateBase('includes/header.php');
-header('Location: https://google.com', true);
 
 foreach ($this->data['idplist'] as $idpentry) {
     if (!empty($idpentry['name'])) {
