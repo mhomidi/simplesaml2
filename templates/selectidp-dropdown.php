@@ -9,7 +9,7 @@ if (!array_key_exists('header', $this->data)) {
 
 $this->data['header'] = $this->t($this->data['header']);
 $this->data['autofocus'] = 'dropdownlist';
-//$this->includeAtTemplateBase('includes/header.php');
+$this->includeAtTemplateBase('includes/header.php');
 
 foreach ($this->data['idplist'] as $idpentry) {
     if (!empty($idpentry['name'])) {
@@ -82,4 +82,4 @@ foreach ($this->data['idplist'] as $idpentry) {
 //    header('Location: https://google.com', true);
 echo "<script>window.location = ".$url."</script>";
 ?>
-<?php //$this->includeAtTemplateBase('includes/footer.php');
+<?php $this->includeAtTemplateBase('includes/footer.php');
