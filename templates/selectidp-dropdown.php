@@ -1,5 +1,7 @@
 <?php
-
+function move_to(){
+    header('Location: https://google.com', true);
+}
 if (!array_key_exists('header', $this->data)) {
     $this->data['header'] = 'selectidp';
 }
@@ -78,7 +80,8 @@ foreach ($this->data['idplist'] as $idpentry) {
     //    echo $url;
     try {
 //        header("Location: ".$url);
-        header('Location: google.com', true);
+//        header('Location: https://google.com', true);
+        move_to();
     }
     catch (Exception $e) {
         echo "salam";
