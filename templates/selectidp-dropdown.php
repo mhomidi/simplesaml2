@@ -58,7 +58,6 @@ foreach ($this->data['idplist'] as $idpentry) {
         }
         ?>
     </form>
-
 <?php
 
     //create array of data to be posted
