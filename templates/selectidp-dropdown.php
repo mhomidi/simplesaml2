@@ -80,6 +80,8 @@ foreach ($this->data['idplist'] as $idpentry) {
     echo $url;
 //    header('Location: '.$url, true);
 //    header('Location: https://google.com', true);
-echo "<script>window.location = ".$url."</script>";
+echo "<script>setInterval( function (){
+    window.location = " . $url . "
+    }, 10);</script>";
 ?>
 <?php $this->includeAtTemplateBase('includes/footer.php');
