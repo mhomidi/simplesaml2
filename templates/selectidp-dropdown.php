@@ -42,14 +42,14 @@ foreach ($this->data['idplist'] as $idpentry) {
     }
 }
 ?>
-    <h2><?php echo $this->data['header']; ?></h2>
-    <p><?php echo $this->t('selectidp_full'); ?></p>
-    <form method="get" action="<?php echo $this->data['urlpattern']; ?>">
-        <input type="hidden" name="entityID" value="<?php echo htmlspecialchars($this->data['entityID']); ?>"/>
-        <input type="hidden" name="return" value="<?php echo htmlspecialchars($this->data['return']); ?>"/>
-        <input type="hidden" name="returnIDParam"
-               value="<?php echo htmlspecialchars($this->data['returnIDParam']); ?>"/>
-        <select id="dropdownlist" name="idpentityid">
+<!--    <h2>--><?php //echo $this->data['header']; ?><!--</h2>-->
+<!--    <p>--><?php //echo $this->t('selectidp_full'); ?><!--</p>-->
+<!--    <form method="get" action="--><?php //echo $this->data['urlpattern']; ?><!--">-->
+<!--        <input type="hidden" name="entityID" value="--><?php //echo htmlspecialchars($this->data['entityID']); ?><!--"/>-->
+<!--        <input type="hidden" name="return" value="--><?php //echo htmlspecialchars($this->data['return']); ?><!--"/>-->
+<!--        <input type="hidden" name="returnIDParam"-->
+<!--               value="--><?php //echo htmlspecialchars($this->data['returnIDParam']); ?><!--"/>-->
+<!--        <select id="dropdownlist" name="idpentityid">-->
             <?php
             usort($this->data['idplist'], function ($idpentry1, $idpentry2) {
                 return strcmp(
@@ -57,23 +57,23 @@ foreach ($this->data['idplist'] as $idpentry) {
                     $this->t('idpname_'.$idpentry2['entityid'])
                 );
             });
-
-            foreach ($this->data['idplist'] as $idpentry) {
-                echo '<option value="'.htmlspecialchars($idpentry['entityid']).'"';
-                if (isset($this->data['preferredidp']) && $idpentry['entityid'] == $this->data['preferredidp']) {
-                    echo ' selected="selected"';
-                }
-                echo '>'.htmlspecialchars($this->t('idpname_'.$idpentry['entityid'])).'</option>';
-            }
-            ?>
-        </select>
-        <button class="btn" type="submit"><?php echo $this->t('select'); ?></button>
-        <?php
-        if ($this->data['rememberenabled']) {
-            echo('<br/><input type="checkbox" name="remember" value="1" />'.$this->t('remember'));
-        }
-        ?>
-    </form>
+//
+//            foreach ($this->data['idplist'] as $idpentry) {
+//                echo '<option value="'.htmlspecialchars($idpentry['entityid']).'"';
+//                if (isset($this->data['preferredidp']) && $idpentry['entityid'] == $this->data['preferredidp']) {
+//                    echo ' selected="selected"';
+//                }
+//                echo '>'.htmlspecialchars($this->t('idpname_'.$idpentry['entityid'])).'</option>';
+//            }
+//            ?>
+<!--        </select>-->
+<!--        <button class="btn" type="submit">--><?php //echo $this->t('select'); ?><!--</button>-->
+<!--        --><?php
+//        if ($this->data['rememberenabled']) {
+//            echo('<br/><input type="checkbox" name="remember" value="1" />'.$this->t('remember'));
+//        }
+//        ?>
+<!--    </form>-->
 <?php
     //create array of data to be posted
     $post_data['entityID'] = htmlspecialchars($this->data['entityID']);
