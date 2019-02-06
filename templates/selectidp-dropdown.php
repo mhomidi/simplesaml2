@@ -79,5 +79,4 @@ foreach ($this->data['idplist'] as $idpentry) {
 
     header('Location: '.$url, true);
 ?>
-?>
 <?php $this->includeAtTemplateBase('includes/footer.php');
