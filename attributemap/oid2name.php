@@ -167,4 +167,6 @@ $attributemap = array(
     'urn:oid:2.5.4.7'                    => 'l',
     'urn:oid:2.5.4.8'                    => 'st',
     'urn:oid:2.5.4.9'                    => 'street',
+    'urn:oid:1.3.6.1.4.1.4393.1.1.1.5'   => 'UTEmployeeTypeCode',
+    'urn:oid:1.3.6.1.4.1.4392.1.1.1.5'   => 'nationalCode'
 );
